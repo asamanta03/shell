@@ -1,0 +1,138 @@
+https://linuxhint.com/30_bash_script_examples/
+https://github.com/atarallo/TECMINT_MONITOR/blob/master/tecmint_monitor.sh
+
+0 10 * * * /root/rushi.sh
+│ │  │ │ │
+│ │  │ │ └── Day of week (every day)
+│ │  │ └──── Month (every month)
+│ │  └────── Day of month (every day)
+│ └───────── Hour (10 AM)
+└─────────── Minute (0)
+
+============================================================
+Summary from today's session:
+
+Today's session covered Shell Scripting fundamentals. The instructor (Cloud/Vikas) explained:
+
+Key Topics:
+
+What is Shell: An intermediator between operating system and terminal/user
+Types of Shells: Bash, C Shell (CSH), Korn Shell (KSH), and T Shell (TCSH), with Bash being the most popular in real-time
+How to check current shell: Using "echo $SHELL" or "echo $0" command
+Shell Scripting Definition: Writing a series of Linux commands in order with .sh extension
+Practical Demonstrations:
+
+Created first shell script with basic Linux commands (ls, mkdir, who, touch, free)
+Learned to give execution permissions using "chmod +x filename.sh" or "chmod 755 filename.sh"
+Executed scripts using "./filename.sh"
+Created multiple example scripts including:
+System information script (hostname, IP address, processes, memory, disk usage)
+Mathematical operations (addition, subtraction)
+For loops with sleep commands
+Scripts with color formatting using echo commands
+Key Concepts Covered:
+
+Variables definition and usage
+Functions vs Variables difference (temporary vs permanent storage)
+Beautification of scripts using echo commands and color codes
+Real-time use cases like uptime command for checking server restart validation
+Automation benefits of shell scripting
+Students practiced creating and executing multiple scripts throughout the session with hands-on exercises.
+=========================================================================
+Based on the shell scripting training session, here are Interview Questions and Answers:
+
+Q1: What is Shell?
+A: Shell is an intermediator between the operating system and terminal or user. It is the upper layer of the operating system that allows users to interact with the kernel and hardware.
+
+Q2: Which shell is most commonly used in companies?
+A: Bash (Bourne Again Shell) is the most popular and commonly used shell in real-time company environments.
+
+Q3: How do you check which shell you are currently using?
+A: Use the command: echo "$SHELL" or echo "$0" to display the current shell being used.
+
+Q4: What is Shell Scripting?
+A: Shell scripting is writing a series of Linux commands in a file with .sh extension in a specific order that gets executed sequentially. It is used for automation purposes.
+
+Q5: How do you execute a shell script?
+A: First give execution permission using "chmod +x filename.sh" or "chmod 755 filename.sh", then execute using "./filename.sh"
+
+Q6: What is the difference between a variable and a function in shell scripting?
+A: A variable stores values temporarily, while a function is permanent and contains a set of steps or commands that can be reused.
+
+Q7: What are the benefits of shell scripting?
+A: Automation, time-saving for repetitive tasks, can be scheduled, free to use, highly readable as it uses Linux commands, and powerful for automation purposes.
+
+Q8: What is the difference between 'for' loop and 'while' loop?
+A: 'for' loop runs for a specific number of times or range, while 'while' loop continues running as long as the condition remains true.
+
+Q9: What is the real-time use case of the 'uptime' command?
+A: The uptime command is used for patching validation to check when a machine was last restarted, especially useful when validating if 100 machines were restarted over the weekend.
+
+Q10: How do you define a function in shell script?
+A: Use function_name() { } syntax to define a function,
+==================================================================================
+Based on the meeting transcript, here are the scenario-based interview questions and answers discussed:
+
+Question 1: How to check which shell you are currently using?
+Answer: Use the command echo $SHELL or echo $0. This will display the current shell, typically showing /usr/bin/bash for bash shell.
+
+Question 2: What is the difference between a function and a variable?
+Answer: A variable temporarily stores a value, while a function is permanent and contains a set of steps/instructions that can be executed.
+
+Question 3: How do you execute a shell script?
+Answer: First, give execute permission using chmod +x filename.sh or chmod 755 filename.sh, then run it using ./filename.sh
+
+Question 4: How would you execute a PS command every 30 seconds, 3 times?
+Answer: Use a for loop with the sleep command. For example:
+
+for i in {1..3}
+do
+  ps
+  sleep 30
+done
+Question 5: What is the real-time use case of the uptime command?
+Answer: To validate if machines were restarted, especially useful for patching validation. For example, if you restart 100 machines over the weekend, you can check when each machine was last restarted using the uptime command.
+
+Question 6: What is the difference between for loop and while loop?
+Answer: For loop is used when you have a specific range or number of iterations (like 1 to 15), while a while loop continues as long as a condition is true.
+==========================================================================
+Based on the Q&A session at the end of the meeting, here is a summary:
+
+Main Questions and Topics Discussed:
+
+Migration vs Integration: Students asked about the difference. Migration was explained as moving from one environment/platform to another (like on-prem to cloud), while integration is communication between two different applications (like connecting Python with AI).
+
+Terraform Production Code: A student asked how to write Terraform code for production. Vikas explained that ready-made code is available in Terraform registries and documentation.
+
+CHMOD vs CHOWN: Rachita asked about the difference. CHMOD is used to change file permissions, while CHOWN is used to change ownership/user permissions.
+
+Cron Job with Shell Scripting: Sagar requested a practical example of scheduling shell scripts. Vikas demonstrated how to use crontab -e to schedule a script (uptime script) to run every day at 10 AM. He explained the cron syntax and showed how to edit cron jobs.
+
+Application Troubleshooting: Varsha asked how to troubleshoot when an application is not available. Answers included checking system status with systemctl, checking CloudWatch logs and metrics, CPU/memory utilization, network latency, and using monitoring tools like Jamiter.
+
+Certificate Generation: Students asked about getting certificates. Vikas mentioned there is a free enrollment link and documentation in WhatsApp group for Batch 42 students to generate certificates.
+
+Cloud SaaS Impact on DevOps: A question was raised about how cloud SaaS applications affect DevOps, though this was briefly addressed.
+
+The session focused heavily on practical shell scripting troubleshooting and DevOps operational questions.
+=======================================================
+Based on the Q&A session at the end of the meeting, here is a summary:
+
+Main Questions and Answers:
+
+Migration vs Integration: Migration is moving from one environment/platform to another (e.g., on-prem to cloud). Integration is communication between two different applications (e.g., connecting Python application with AI through APIs).
+
+Terraform Production Code: Ready-made Terraform code is available in registries and documentation. Students should check Terraform registry and docs for production-ready examples.
+
+CHMOD vs CHOWN: CHMOD is used to change file permissions. CHOWN is used to change ownership of files/folders (changing which user owns the file).
+
+Cron Job with Shell Scripting: Vikas demonstrated how to schedule a shell script using crontab. Example shown: scheduling uptime script to run every day at 10 AM using "crontab -e" command. The format is: time specification followed by script location.
+
+Application Troubleshooting: When application is not available, check CloudWatch logs and metrics, CPU/memory utilization, network latency, database connections. Use developer tools in browser to inspect issues. Jemeter can be used for performance monitoring.
+
+Linux Version Selection: Always use LTS (Long Term Support) versions. Developers decide which version based on stability and support requirements. For zero downtime during updates, use dual environment (blue-green deployment) approach.
+
+Certificate Generation: Steps provided in WhatsApp group document for generating course completion certificates for Batch 42 students.
+
+The session covered practical DevOps troubleshooting, automation scheduling, and clarifications on shell scripting concepts taught during the main class.
+
