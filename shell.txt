@@ -1,5 +1,7 @@
 https://linuxhint.com/30_bash_script_examples/
 https://github.com/atarallo/TECMINT_MONITOR/blob/master/tecmint_monitor.sh
+https://www.tecmint.com/using-shell-script-to-automate-linux-system-maintenance-tasks/
+https://gist.github.com/JBlond/2fea43a3049b38287e5e9cefc87b2124
 
 0 10 * * * /root/rushi.sh
 │ │  │ │ │
@@ -135,4 +137,5 @@ Linux Version Selection: Always use LTS (Long Term Support) versions. Developers
 Certificate Generation: Steps provided in WhatsApp group document for generating course completion certificates for Batch 42 students.
 
 The session covered practical DevOps troubleshooting, automation scheduling, and clarifications on shell scripting concepts taught during the main class.
+
 
